@@ -207,6 +207,16 @@
 			}
 		}
 	}
+
+  #viewStars {
+	@include icon($stars-icon);
+
+	@if $stars-icon-toggled {
+	  &.toggled {
+		@include icon($stars-icon-toggled);
+	  }
+	}
+  }
 }
 
 // Sidebar

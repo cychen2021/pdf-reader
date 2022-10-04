@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useCallback, useImperativeHandle } from 'reac
 import PropTypes from 'prop-types';
 import Layer from './layer';
 import AnnotationsView from './annotations-view';
+import StarsView from './stars-view';
 import Toolbar from './toolbar';
 import { annotationColors, selectionColor } from '../lib/colors';
 import LabelPopup from './label-popup';
@@ -1935,6 +1936,7 @@ const Annotator = React.forwardRef((props, ref) => {
 				onSelectorMenu={handleSelectorMenuOpen}
 				onDeselectAnnotations={handleDeselectAnnotations}
 			/>
+			<StarsView />
 			<Layer
 				selectionColor={_mode === 'highlight' ? _color : selectionColor}
 				selectionPositions={_selectionPositions}
